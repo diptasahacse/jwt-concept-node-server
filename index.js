@@ -74,7 +74,7 @@ app.get('/', (req, res) => {
 app.post('/login', (req, res) => {
     const user = req.body;
     if (user.email === 'diptasaha.lpu.cse@gmail.com' && user.pass == '1234567') {
-        const accessToken = jwt.sign({ email: user.email }, process.env.ACCESS_TOKEN, { expiresIn: "1h" });
+        const accessToken = jwt.sign({ email: user.email }, process.env.ACCESS_TOKEN, { expiresIn: "5s" });
         res.send(
             {
                 success: true,
